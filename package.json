@@ -1,0 +1,20 @@
+{
+  "name": "gp-monitoreo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Panel de monitoreo de red para Grupo Presidente, alimentado por Uptime Kuma.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node --check server/index.js && node --check server/kuma.js && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "socket.io-client": "^4.8.1"
+  }
+}
